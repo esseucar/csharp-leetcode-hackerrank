@@ -1,0 +1,55 @@
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
+class Result
+{
+    public static void plusMinus(List<int> arr)
+    {
+        int num = arr.Count;
+        int sumP=0;
+        int sumN=0;
+        int sumZ=0;
+        foreach(int x in arr)
+        {
+            if(x>0){
+                sumP++;
+            } 
+            else if (x==0)
+            {
+                sumZ++;
+            }
+            else{sumN++;}
+            
+        }
+        
+        Double A= (double)sumP / num;  
+        Double B= (double)sumN / num;
+        Double C= (double)sumZ / num;
+        Console.WriteLine($"{A:F6}\n{B:F6}\n{C:F6}");
+        //Console.WriteLine($"{A.ToString("F6")}\n{B.ToString("F6")}\n{C.ToString("F6")}");
+    }
+
+}
+
+class Solution
+{
+    public static void Main(string[] args)
+    {
+        int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+
+        Result.plusMinus(arr);
+    }
+}
