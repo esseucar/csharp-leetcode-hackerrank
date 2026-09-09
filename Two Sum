@@ -1,0 +1,18 @@
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        int num =nums.Length;
+        for (int x=0;x<num;x++)
+        {
+            int n= target-nums[x];
+            for(int y=x+1;y<num;y++)
+            {
+                if(n==nums[y])
+                {
+                   return new int[] { x, y };  
+                }
+            }
+
+        }
+        return new int[] {};
+    }
+}
