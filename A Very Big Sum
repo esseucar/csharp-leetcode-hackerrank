@@ -16,17 +16,20 @@ class Result
 {
 
     /* Alternatif yol
-     public static long aVeryBigSum(List<long> ar)
+      
+    public static long aVeryBigSum(List<long> ar)
     {
-      long sum = 0;
-  
-      foreach (int x in ar)
-      {
-          sum = x + sum;
-      }
-  
-      return sum;
+        long sum = 0;
+    
+        foreach (long x in ar)
+        {
+            sum = sum + x;
+        }
+    
+        return sum;
     }
+
+
      */
 
     public static long aVeryBigSum(List<long> ar)
