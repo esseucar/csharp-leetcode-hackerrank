@@ -47,6 +47,18 @@ class Solution
 
         List<int> result = Result.compareTriplets(a, b);
 
+        /*string input = Console.ReadLine();
+
+        string[] numbers = input.Split(' ');
+
+        List<int> result = new List<int>();
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+          int number = Convert.ToInt32(numbers[i]);
+          result.Add(number);
+        }*/
+
         textWriter.WriteLine(String.Join(" ", result));
 
         textWriter.Flush();
