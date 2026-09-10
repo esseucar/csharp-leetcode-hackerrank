@@ -1,3 +1,29 @@
+public class Solution {
+    public int RomanToInt(string s) {
+
+        int sum=0;
+        for(int i=0;i<s.Length;i++){
+            int current= GetValue(s[i]);
+            if(i+1<s.Length && current <GetValue(s[i+1])){
+                sum-= current;
+            }else{sum+= current;}
+        }
+        return sum;
+    }
+    public int GetValue(char x){
+            switch (x) {
+                case 'I': return 1 ;break;
+                case 'V': return 5;break;
+                case 'X': return 10;break;
+                case 'L': return 50;break;
+                case 'C': return 100;break;
+                case 'D': return 500;break;
+                case 'M': return 1000;break;
+                default: return 0;break;
+            }
+    }
+}
+
 /* public class Solution {
     public int RomanToInt(string s) {
         int sum = 0;
