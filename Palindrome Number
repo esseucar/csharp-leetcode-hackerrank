@@ -17,3 +17,24 @@ public class Solution {
         }return result;
     }
 }
+
+/* Alternatif yol
+
+public class Solution {
+    public bool IsPalindrome(int x) 
+    {
+        string num = x.ToString();
+        bool isPalindrome = true;
+        int len = num.Length;
+
+        for (int i = 0; i < len / 2; i++)
+        {
+            // Directly compare the characters from the front and the back
+            if (num[i] != num[len - 1 - i])
+            {
+                isPalindrome = false;
+                break; // Exit early since it's confirmed not to be a palindrome
+            }
+        }return isPalindrome;
+    }
+} */
