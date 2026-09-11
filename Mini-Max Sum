@@ -16,8 +16,8 @@ class Result
 {
     public static void miniMaxSum(List<int> arr)
     {
-      int sumMax=0;
-      int sumMin=0;  
+      long sumMax=0;
+      long sumMin=0;   
       List<int> arrSorted = arr.OrderBy(x => x).ToList();
       for(int i=1;i<arr.Count;i++)
       {
